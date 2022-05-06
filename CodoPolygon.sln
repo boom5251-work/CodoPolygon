@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodoPolygon.DAL", "CodoPoly
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodoPolygon.Business", "CodoPolygon.Business\CodoPolygon.Business.csproj", "{35E8F41F-CBA5-4DDD-9398-EDAE176746A9}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "CodoPolygon.SQL", "CodoPolygon.SQL\CodoPolygon.SQL.sqlproj", "{101F9DD1-13E0-403F-B54B-299D9489E61F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,12 @@ Global
 		{35E8F41F-CBA5-4DDD-9398-EDAE176746A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35E8F41F-CBA5-4DDD-9398-EDAE176746A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35E8F41F-CBA5-4DDD-9398-EDAE176746A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{101F9DD1-13E0-403F-B54B-299D9489E61F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{101F9DD1-13E0-403F-B54B-299D9489E61F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{101F9DD1-13E0-403F-B54B-299D9489E61F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{101F9DD1-13E0-403F-B54B-299D9489E61F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{101F9DD1-13E0-403F-B54B-299D9489E61F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{101F9DD1-13E0-403F-B54B-299D9489E61F}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
