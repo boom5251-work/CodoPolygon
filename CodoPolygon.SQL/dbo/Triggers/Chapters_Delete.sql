@@ -7,5 +7,5 @@
 		SET NOCOUNT ON
 
 		DELETE [dbo].[ContentItems]
-		WHERE ChapterId = (SELECT Id FROM deleted)
+		WHERE ChapterId IN (SELECT Id FROM deleted)
 	END

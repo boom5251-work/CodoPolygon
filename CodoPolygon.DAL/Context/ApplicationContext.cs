@@ -5,7 +5,7 @@ namespace CodoPolygon.DAL.Context
 {
     public sealed class ApplicationContext : DbContext, IApplicationContext
     {
-        public ApplicationContext() : base("name=CodoPolygonDb") { }
+        public ApplicationContext() : base("CodoPolygonDb") { }
 
 
         internal DbSet<Article> Articles { get; set; }

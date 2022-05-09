@@ -55,7 +55,7 @@ namespace CodoPolygon.DAL.Repository
                 _set.Remove(_chapter);
             }
 
-            return _context.SaveChanges() == 1;
+            return _context.SaveChanges() >= 1;
         }
 
 

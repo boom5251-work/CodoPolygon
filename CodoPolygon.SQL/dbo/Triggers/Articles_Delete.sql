@@ -7,8 +7,8 @@
 		SET NOCOUNT ON
 
 		DELETE [dbo].[Chapters]
-		WHERE ArticleId = (SELECT Id FROM deleted)
+		WHERE ArticleId IN (SELECT Id FROM deleted)
 
 		DELETE [dbo].[UsersArticles]
-		WHERE ArticleId = (SELECT Id FROM deleted)
+		WHERE ArticleId IN (SELECT Id FROM deleted)
 	END
