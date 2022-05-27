@@ -57,5 +57,28 @@ namespace CodoPolygon.DAL.Repository
 
             return _context.SaveChanges() >= 1;
         }
+
+
+        /// <summary>
+        /// Получает статью по уникальному короткому названию.
+        /// <param name="latName">Сокращенное латинское название.</param>
+        /// <return>Статья.</return>
+        /// </summary>
+        public Article GetByLatName(string latName)
+        {
+            return _set.SingleOrDefault(item => item.LatShortName == latName);
+        }
+
+
+        /// <summary>
+        /// Проверяет, существует ли статься с указанным сокращенным латинским названием.
+        /// </summary>
+        /// <param name="latName">Сокращенное латинское название.</param>
+        /// <returns>True, если вхождение найдено. False — нет.</returns>
+        public bool HasArticle(string latName)
+        {
+            var article = GetByLatName(latName);
+            return article != null;
+        }
     }
 }

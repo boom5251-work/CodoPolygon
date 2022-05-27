@@ -39,7 +39,9 @@ namespace CodoPolygon.Tests.Data
             var article = new Article
             {
                 Name = "Тестовое имя статьи",
-                Description = "Тестовое описание статьи"
+                Description = "Тестовое описание статьи",
+                LatShortName = "test-article",
+                IsPublished = false
             };
 
             using (var repository = new ArticleRepository())

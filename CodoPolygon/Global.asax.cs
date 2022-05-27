@@ -1,5 +1,7 @@
-﻿using System;
+﻿using CodoPolygon.AppConfig;
+using System;
 using System.Web;
+using System.Web.Routing;
 
 namespace CodoPolygon
 {
@@ -7,6 +9,7 @@ namespace CodoPolygon
     {
         protected void Application_Start(object sender, EventArgs e)
         {
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
         }
     }
 }

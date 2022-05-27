@@ -66,16 +66,31 @@
     <Compile Include="Migrations\202205031814584_Initial.designer.cs">
       <DependentUpon>202205031814584_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202205091459135_ArticleUpdated.cs" />
+    <Compile Include="Migrations\202205091459135_ArticleUpdated.designer.cs">
+      <DependentUpon>202205091459135_ArticleUpdated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205170844135_ArticleUpdated_2.cs" />
+    <Compile Include="Migrations\202205170844135_ArticleUpdated_2.designer.cs">
+      <DependentUpon>202205170844135_ArticleUpdated_2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\ArticleRepository.cs" />
     <Compile Include="Repository\ChapterRepository.cs" />
     <Compile Include="Repository\ContentRepository.cs" />
+    <Compile Include="Repository\UserArticleRepository.cs" />
     <Compile Include="Repository\UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202205031814584_Initial.resx">
       <DependentUpon>202205031814584_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205091459135_ArticleUpdated.resx">
+      <DependentUpon>202205091459135_ArticleUpdated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205170844135_ArticleUpdated_2.resx">
+      <DependentUpon>202205170844135_ArticleUpdated_2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

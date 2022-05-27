@@ -64,9 +64,23 @@ namespace CodoPolygon.DAL.Repository
         /// </summary>
         /// <param name="articleId">Идентификатор статьи.</param>
         /// <returns>Перечислитель глав.</returns>
-        public IEnumerable<Chapter> GetByArticleId(int articleId)
+        public IReadOnlyList<Chapter> GetByArticleId(int articleId)
         {
-            return _set.Where(item => item.ArticleId == articleId);
+            return _set.Where(item => item.ArticleId == articleId).ToList();
+        }
+
+
+        /// <summary>
+        /// Проверяет, существует ли глава в статье с указанным порядковым номером.
+        /// </summary>
+        /// <param name="articleId">Идентификатор статьи.</param>
+        /// <param name="chapterSeqNum">Порядковый номер главы.</param>
+        /// <returns>True, если вхождение найдено. False — нет.</returns>
+        public bool HasChapter(int articleId, int chapterSeqNum)
+        {
+            var chapters = GetByArticleId(articleId);
+            var chapter = chapters.SingleOrDefault(item => item.SequenceNumber == chapterSeqNum);
+            return chapter != null;
         }
     }
 }
