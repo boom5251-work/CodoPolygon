@@ -75,12 +75,23 @@ namespace CodoPolygon.DAL.Repository
         /// </summary>
         /// <param name="articleId">Идентификатор статьи.</param>
         /// <param name="chapterSeqNum">Порядковый номер главы.</param>
+        /// <param name="chapter">Найденная глава.</param>
         /// <returns>True, если вхождение найдено. False — нет.</returns>
-        public bool HasChapter(int articleId, int chapterSeqNum)
+        public bool HasChapter(int articleId, int chapterSeqNum, out Chapter chapter)
         {
             var chapters = GetByArticleId(articleId);
-            var chapter = chapters.SingleOrDefault(item => item.SequenceNumber == chapterSeqNum);
-            return chapter != null;
+            chapter = chapters.SingleOrDefault(item => item.SequenceNumber == chapterSeqNum);
+            return chapters != null; 
         }
+
+
+        /// <summary>
+        /// Проверяет, существует ли глава в статье с указанным порядковым номером.
+        /// </summary>
+        /// <param name="articleId">Идентификатор статьи.</param>
+        /// <param name="chapterSeqNum">Порядковый номер главы.</param>
+        /// <returns>True, если вхождение найдено. False — нет.</returns>
+        public bool HasChapter(int articleId, int chapterSeqNum) =>
+            HasChapter(articleId, chapterSeqNum, out _);
     }
 }

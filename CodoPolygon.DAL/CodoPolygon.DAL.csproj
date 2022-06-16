@@ -62,6 +62,8 @@
     <Compile Include="DomainModels\User.cs" />
     <Compile Include="DomainModels\UserArticle.cs" />
     <Compile Include="DomainModels\UserRole.cs" />
+    <Compile Include="Map\ArticleMap.cs" />
+    <Compile Include="Map\ContentItemMap.cs" />
     <Compile Include="Migrations\202205031814584_Initial.cs" />
     <Compile Include="Migrations\202205031814584_Initial.designer.cs">
       <DependentUpon>202205031814584_Initial.cs</DependentUpon>
@@ -81,6 +83,8 @@
     <Compile Include="Repository\ContentRepository.cs" />
     <Compile Include="Repository\UserArticleRepository.cs" />
     <Compile Include="Repository\UserRepository.cs" />
+    <Compile Include="ViewModels\ArticleViewModel.cs" />
+    <Compile Include="ViewModels\ContentItemViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202205031814584_Initial.resx">

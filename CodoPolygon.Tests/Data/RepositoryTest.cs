@@ -1,5 +1,7 @@
 ﻿using CodoPolygon.DAL.DomainModels;
+using CodoPolygon.DAL.Map;
 using CodoPolygon.DAL.Repository;
+using CodoPolygon.DAL.ViewModels;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 
@@ -73,18 +75,15 @@ namespace CodoPolygon.Tests.Data
 
         private void AddContentItem()
         {
-            var contentItem = new ContentItem
+            var viewModel = new ContentItemViewModel
             {
-                ChapterId = ChapterId,
                 Content = "Контент",
-                SequenceNumber = 1,
-                TypeId = 1
+                SeqNum = 1,
+                TypeCode = "NotSet"
             };
 
-            using (var repository = new ContentRepository())
-            {
-                Assert.IsTrue(repository.AddOrUpdate(contentItem));
-            }
+            var contentMap = new ContentMap();
+            contentMap.AddOrUpdate(ChapterId, viewModel);
         }
     }
 }

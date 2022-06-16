@@ -60,6 +60,17 @@ namespace CodoPolygon.DAL.Repository
 
 
         /// <summary>
+        /// Получает статьи по набору идентификаторов.
+        /// </summary>
+        /// <param name="ids">Набор идентификаторов.</param>
+        /// <returns>Перечислитель статей.</returns>
+        public IReadOnlyList<Article> GetByIds(params int[] ids)
+        {
+            return _set.Where(item => ids.Contains(item.Id)).ToList();
+        }
+
+
+        /// <summary>
         /// Получает статью по уникальному короткому названию.
         /// <param name="latName">Сокращенное латинское название.</param>
         /// <return>Статья.</return>
