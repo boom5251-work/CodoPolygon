@@ -1,0 +1,26 @@
+@import '../main'
+
+
+$code-panel-header-background: #e6e6e6
+$code-panel-content-background: #f2f2f2
+
+
+.code-panel
+  border: 1px solid $code-panel-header-background
+  width: 100%
+
+  >.code-panel-header
+    background-color: $code-panel-header-background
+    padding: 8px 16px
+
+    >span
+      font-size: 10pt
+
+  >.code-panel-content
+    background-color: $code-panel-content-background
+
+    >pre
+      font-size: 10pt
+      line-height: 1.5
+      margin: 0
+      padding: 16px
