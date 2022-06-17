@@ -12,7 +12,7 @@ namespace CodoPolygon.Controls.View
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            textContent.InnerHtml = Text;
+            htmlContent.InnerHtml = Text;
         }
     }
 }

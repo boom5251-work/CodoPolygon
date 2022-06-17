@@ -1,4 +1,8 @@
 @font-face {
+  font-family: "Manrope-Bold";
+  src: url("/root/fonts/Manrope-Bold.ttf");
+}
+@font-face {
   font-family: "Manrope-Regular";
   src: url("/root/fonts/Manrope-Regular.ttf");
 }
@@ -15,18 +19,25 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  color: #171717;
   font-family: "Manrope-SemiBold";
   margin: 0;
 }
 
 p, span, a, div {
+  color: #171717;
   font-family: "Manrope-Regular";
   font-size: 11pt;
   margin: 0;
 }
 
 code {
+  color: #171717;
   font-family: "Cascadia-Mono";
+}
+
+a {
+  cursor: pointer;
 }
 
 header {
@@ -71,9 +82,47 @@ section, footer {
   margin-bottom: 25px;
 }
 .text-panel > .text-panel-content {
-  color: #171717;
   font-size: 16px;
   line-height: 1.5;
+}
+
+.subtitle-anchor {
+  margin: 40px 0 20px 0;
+}
+.subtitle-anchor > .subtitle-anchor-header {
+  font-family: "Manrope-Bold";
+  font-size: 32px;
+}
+
+.note-panel {
+  background-color: #efd9fd;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  padding: 20px;
+}
+.note-panel > .note-panel-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-bottom: 20px;
+}
+.note-panel > .note-panel-header > img {
+  height: 20px;
+  width: 20px;
+  margin: auto 5px auto 0;
+}
+.note-panel > .note-panel-header > .note-panel-title {
+  color: #3b2e58;
+  font-family: "Manrope-Bold";
+  font-size: 16px;
+}
+.note-panel > .note-panel-content {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.note-panel > .note-panel-content a {
+  color: #3b2e58;
+  font-family: "Manrope-Bold";
 }
 
 /*# sourceMappingURL=article.css.map */

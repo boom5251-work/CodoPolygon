@@ -11,16 +11,16 @@ namespace CodoPolygon.Controls.View
 {
 
 
-    public partial class TextPanel
+    public partial class SubtitleAnchor
     {
 
         /// <summary>
-        /// htmlContent элемент управления.
+        /// container элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически созданное поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl htmlContent;
+        protected global::System.Web.UI.WebControls.Panel container;
     }
 }

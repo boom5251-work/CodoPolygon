@@ -11,7 +11,7 @@ namespace CodoPolygon.Controls.View
 {
 
 
-    public partial class TextPanel
+    public partial class NotePanel
     {
 
         /// <summary>
