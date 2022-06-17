@@ -46,6 +46,8 @@ section, footer {
 
 .code-panel {
   border: 1px solid #e6e6e6;
+  box-sizing: border-box;
+  margin-bottom: 25px;
   width: 100%;
 }
 .code-panel > .code-panel-header {
@@ -53,7 +55,7 @@ section, footer {
   padding: 8px 16px;
 }
 .code-panel > .code-panel-header > span {
-  font-size: 10pt;
+  font-size: 1em;
 }
 .code-panel > .code-panel-content {
   background-color: #f2f2f2;
@@ -63,6 +65,15 @@ section, footer {
   line-height: 1.5;
   margin: 0;
   padding: 16px;
+}
+
+.text-panel {
+  margin-bottom: 25px;
+}
+.text-panel > .text-panel-content {
+  color: #171717;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 /*# sourceMappingURL=article.css.map */
