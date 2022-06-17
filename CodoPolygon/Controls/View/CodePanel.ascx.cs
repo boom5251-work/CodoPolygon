@@ -21,7 +21,7 @@ namespace CodoPolygon.Controls.View
             code.InnerText = Code;
 
             if (!string.IsNullOrEmpty(Lang))
-                code.Attributes["class"] = $"lang-{Lang.ToLower()}";
+                code.Attributes["class"] = $"language-{Lang.ToLower()}";
         }
 
 
