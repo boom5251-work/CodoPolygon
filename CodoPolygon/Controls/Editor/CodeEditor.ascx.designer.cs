@@ -7,12 +7,21 @@
 // </автоматически создаваемое>
 //------------------------------------------------------------------------------
 
-namespace CodoPolygon.Controls.View
+namespace CodoPolygon.Controls.Editor
 {
 
 
-    public partial class CodePanel
+    public partial class CodeEditor
     {
+
+        /// <summary>
+        /// langSelect элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически созданное поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList langSelect;
 
         /// <summary>
         /// code элемент управления.
@@ -21,6 +30,6 @@ namespace CodoPolygon.Controls.View
         /// Автоматически созданное поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl code;
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea code;
     }
 }

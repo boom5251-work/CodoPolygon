@@ -1,0 +1,60 @@
+@import '../main'
+
+
+$code-panel-header-background: #e6e6e6
+$code-panel-content-background: #f2f2f2
+
+
+.code-editor
+  border: 1px solid $code-panel-header-background
+  box-sizing: border-box
+  margin-bottom: 25px
+  width: 100%
+
+  >.code-editor-header
+    background-color: $code-panel-header-background
+    display: flex
+    padding: 8px 16px
+
+    >.code-editor-header-select
+      background-color: transparent
+      border: 1px solid darken($code-panel-header-background, 15%)
+      color: $main-text-color
+      height: 24px
+      cursor: pointer
+      font-family: 'Manrope-Regular'
+      font-size: 1em
+      outline: none
+
+    >.remove-button-container
+      display: flex
+      flex-direction: row-reverse
+      height: 24px
+      width: 100%
+
+      >.editor-remove-button
+        box-sizing: border-box
+        cursor: pointer
+        height: 24px
+        padding: 4px 0
+        transition: .2s
+
+      >.editor-remove-button:hover
+        fill: lighten(#979797, 10%)
+
+  >.code-editor-content
+    background-color: $code-panel-content-background
+
+    >.code-editor-content-area
+      background-color: transparent
+      border: none
+      box-sizing: border-box
+      display: block
+      font-family: 'Cascadia-Mono'
+      font-size: 10pt
+      line-height: 1.5
+      margin: 0
+      outline: none
+      padding: 16px
+      resize: vertical
+      width: 100%

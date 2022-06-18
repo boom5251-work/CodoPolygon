@@ -1,0 +1,117 @@
+@font-face {
+  font-family: "Manrope-Bold";
+  src: url("/root/fonts/Manrope-Bold.ttf");
+}
+@font-face {
+  font-family: "Manrope-ExtraBold";
+  src: url("/root/fonts/Manrope-ExtraBold.ttf");
+}
+@font-face {
+  font-family: "Manrope-Regular";
+  src: url("/root/fonts/Manrope-Regular.ttf");
+}
+@font-face {
+  font-family: "Manrope-SemiBold";
+  src: url("/root/fonts/Manrope-SemiBold.ttf");
+}
+@font-face {
+  font-family: "Cascadia-Mono";
+  src: url("/root/fonts/Cascadia-Mono.ttf");
+}
+body {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #171717;
+  font-family: "Manrope-SemiBold";
+  margin: 0;
+}
+
+p, div {
+  color: #171717;
+  font-family: "Manrope-Regular";
+  font-size: 11pt;
+  margin: 0;
+}
+
+code {
+  color: #171717;
+  font-family: "Cascadia-Mono";
+}
+
+a {
+  cursor: pointer;
+}
+
+header {
+  margin: 0 auto;
+  max-width: 800px;
+  min-width: 600px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+section, footer {
+  margin: 0 auto;
+  max-width: 800px;
+  min-width: 600px;
+  padding: 15px;
+}
+
+.code-editor {
+  border: 1px solid #e6e6e6;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+  width: 100%;
+}
+.code-editor > .code-editor-header {
+  background-color: #e6e6e6;
+  display: flex;
+  padding: 8px 16px;
+}
+.code-editor > .code-editor-header > .code-editor-header-select {
+  background-color: transparent;
+  border: 1px solid silver;
+  color: #171717;
+  height: 24px;
+  cursor: pointer;
+  font-family: "Manrope-Regular";
+  font-size: 1em;
+  outline: none;
+}
+.code-editor > .code-editor-header > .remove-button-container {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 24px;
+  width: 100%;
+}
+.code-editor > .code-editor-header > .remove-button-container > .editor-remove-button {
+  box-sizing: border-box;
+  cursor: pointer;
+  height: 24px;
+  padding: 4px 0;
+  transition: 0.2s;
+}
+.code-editor > .code-editor-header > .remove-button-container > .editor-remove-button:hover {
+  fill: #b1b1b1;
+}
+.code-editor > .code-editor-content {
+  background-color: #f2f2f2;
+}
+.code-editor > .code-editor-content > .code-editor-content-area {
+  background-color: transparent;
+  border: none;
+  box-sizing: border-box;
+  display: block;
+  font-family: "Cascadia-Mono";
+  font-size: 10pt;
+  line-height: 1.5;
+  margin: 0;
+  outline: none;
+  padding: 16px;
+  resize: vertical;
+  width: 100%;
+}
+
+/*# sourceMappingURL=editor.css.map */

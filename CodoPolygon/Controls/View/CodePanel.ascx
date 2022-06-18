@@ -2,9 +2,9 @@
 
 <div class="code-panel">
     <div class="code-panel-header">
-        <span id="title" runat="server"></span>
+        <span><%= Title %></span>
     </div>
     <div class="code-panel-content">
-        <pre><code id="code" runat="server"></code></pre>
+        <pre><code id="code" runat="server"><%= Code %></code></pre>
     </div>
 </div>
