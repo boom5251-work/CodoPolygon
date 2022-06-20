@@ -42,6 +42,7 @@ code {
 
 a {
   cursor: pointer;
+  text-decoration: none;
 }
 
 header {
@@ -57,6 +58,13 @@ section, footer {
   max-width: 800px;
   min-width: 600px;
   padding: 15px;
+}
+
+.remove-button-container {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 24px;
+  width: 100%;
 }
 
 .code-editor {
@@ -80,21 +88,15 @@ section, footer {
   font-size: 1em;
   outline: none;
 }
-.code-editor > .code-editor-header > .remove-button-container {
-  display: flex;
-  flex-direction: row-reverse;
-  height: 24px;
-  width: 100%;
-}
-.code-editor > .code-editor-header > .remove-button-container > .editor-remove-button {
+.code-editor > .code-editor-header .editor-remove-button {
   box-sizing: border-box;
   cursor: pointer;
   height: 24px;
-  padding: 4px 0;
-  transition: 0.2s;
+  margin-right: 4px;
+  padding: 2px;
 }
-.code-editor > .code-editor-header > .remove-button-container > .editor-remove-button:hover {
-  fill: #b1b1b1;
+.code-editor > .code-editor-header .editor-remove-button:hover {
+  background-color: #d9d9d9;
 }
 .code-editor > .code-editor-content {
   background-color: #f2f2f2;
@@ -112,6 +114,68 @@ section, footer {
   padding: 16px;
   resize: vertical;
   width: 100%;
+}
+
+.note-editor {
+  background-color: #efd9fd;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  padding: 20px 0;
+}
+.note-editor > .note-editor-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 0 20px;
+}
+.note-editor > .note-editor-header > .buttons-container {
+  display: flex;
+}
+.note-editor > .note-editor-header > .buttons-container > .link-item-container {
+  display: flex;
+  visibility: hidden;
+}
+.note-editor > .note-editor-header > .buttons-container .href-input {
+  background-color: transparent;
+  border: 1px solid #3b2e58;
+  box-sizing: border-box;
+  font-family: "Manrope-Regular";
+  height: 24px;
+  margin-right: 4px;
+  outline: none;
+  width: 200px;
+}
+.note-editor > .content-editable {
+  font-size: 16px;
+  outline: none;
+  padding: 20px 20px 0 20px;
+}
+.note-editor > .content-editable > a {
+  color: #3b2e58;
+  font-family: "Manrope-Bold";
+}
+.note-editor > .content-editable > a:hover {
+  text-decoration: underline;
+}
+.note-editor .editor-button {
+  box-sizing: border-box;
+  cursor: pointer;
+  height: 24px;
+  margin-right: 4px;
+  padding: 2px;
+}
+.note-editor .editor-button:hover {
+  background-color: #e5c1fc;
+}
+.note-editor .editor-remove-button {
+  box-sizing: border-box;
+  cursor: pointer;
+  height: 24px;
+  margin-right: 4px;
+  padding: 2px;
+}
+.note-editor .editor-remove-button:hover {
+  background-color: #e5c1fc;
 }
 
 /*# sourceMappingURL=editor.css.map */

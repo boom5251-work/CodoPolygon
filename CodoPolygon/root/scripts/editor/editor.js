@@ -1,12 +1,41 @@
 ﻿$(function () {
-    $('.content-container').sortable({ cancel: 'input, textarea, select, .remove-button-container, [contentEditable]' });
+    $('.content-container').sortable({ cancel: 'input, textarea, select, img, p, [contentEditable]' });
+
 
     $('.add-code-editor-button').on('click', function () {
         $('.content-container').append(codeEditor);
     });
 
+
     $(document).on('click', '.editor-remove-button', function () {
        $(this).closest('.editor').remove();
+    });
+
+
+    $(document).on('click', '.add-link-button', function () {
+       let $buttonContainer = $(this).closest('.buttons-container');
+       $buttonContainer.find('.link-item-container').css("visibility", "inherit");
+    });
+
+
+    $(document).on('click', '.save-link-button', function () {
+        let $buttonContainer = $(this).closest('.buttons-container');
+
+        let $hrefInput = $buttonContainer.find('.href-input');
+
+        let linkUrl = $hrefInput.val();
+        let linkText = document.getSelection();
+
+        document.execCommand('insertHTML', false, `<a href="${linkUrl} target="_black">${linkText}</a>`);
+
+        $hrefInput.val('');
+        $buttonContainer.find('.link-item-container').css("visibility", "hidden");
+    });
+
+
+    $(document).on('click', '.cancel-link-button', function () {
+        let $buttonContainer = $(this).closest('.buttons-container');
+        $buttonContainer.find('.link-item-container').css("visibility", "hidden");
     });
 })
 

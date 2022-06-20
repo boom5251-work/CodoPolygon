@@ -1,24 +1,47 @@
 @import '../main'
 
 
-$code-panel-header-background: #e6e6e6
-$code-panel-content-background: #f2f2f2
+
+$code-editor-header-background: #e6e6e6
+
+$note-editor-background: #efd9fd
+
+
+
+@mixin editor-button($background-color)
+  box-sizing: border-box
+  cursor: pointer
+  height: 24px
+  margin-right: 4px
+  padding: 2px
+
+  &:hover
+    background-color: darken($background-color, 5%)
+
+
+
+.remove-button-container
+  display: flex
+  flex-direction: row-reverse
+  height: 24px
+  width: 100%
+
 
 
 .code-editor
-  border: 1px solid $code-panel-header-background
+  border: 1px solid $code-editor-header-background
   box-sizing: border-box
   margin-bottom: 25px
   width: 100%
 
   >.code-editor-header
-    background-color: $code-panel-header-background
+    background-color: $code-editor-header-background
     display: flex
     padding: 8px 16px
 
     >.code-editor-header-select
       background-color: transparent
-      border: 1px solid darken($code-panel-header-background, 15%)
+      border: 1px solid darken($code-editor-header-background, 15%)
       color: $main-text-color
       height: 24px
       cursor: pointer
@@ -26,24 +49,11 @@ $code-panel-content-background: #f2f2f2
       font-size: 1em
       outline: none
 
-    >.remove-button-container
-      display: flex
-      flex-direction: row-reverse
-      height: 24px
-      width: 100%
-
-      >.editor-remove-button
-        box-sizing: border-box
-        cursor: pointer
-        height: 24px
-        padding: 4px 0
-        transition: .2s
-
-      >.editor-remove-button:hover
-        fill: lighten(#979797, 10%)
+    .editor-remove-button
+      @include editor-button($code-editor-header-background)
 
   >.code-editor-content
-    background-color: $code-panel-content-background
+    background-color: #f2f2f2
 
     >.code-editor-content-area
       background-color: transparent
@@ -58,3 +68,52 @@ $code-panel-content-background: #f2f2f2
       padding: 16px
       resize: vertical
       width: 100%
+
+
+
+.note-editor
+  background-color: $note-editor-background
+  border-radius: 8px
+  margin-bottom: 25px
+  padding: 20px 0
+
+  >.note-editor-header
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+    margin: 0 20px
+
+    >.buttons-container
+      display: flex
+
+      >.link-item-container
+        display: flex
+        visibility: hidden
+
+      .href-input
+        background-color: transparent
+        border: 1px solid #3b2e58
+        box-sizing: border-box
+        font-family: 'Manrope-Regular'
+        height: 24px
+        margin-right: 4px
+        outline: none
+        width: 200px
+
+  >.content-editable
+    font-size: 16px
+    outline: none
+    padding: 20px 20px 0 20px
+
+    >a
+      color: #3b2e58
+      font-family: "Manrope-Bold"
+
+    >a:hover
+      text-decoration: underline
+
+  .editor-button
+    @include editor-button($note-editor-background)
+
+  .editor-remove-button
+    @include editor-button($note-editor-background)
