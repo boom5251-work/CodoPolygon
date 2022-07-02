@@ -3,6 +3,10 @@
   src: url("/root/fonts/Manrope-Bold.ttf");
 }
 @font-face {
+  font-family: "Manrope-ExtraBold";
+  src: url("/root/fonts/Manrope-ExtraBold.ttf");
+}
+@font-face {
   font-family: "Manrope-Regular";
   src: url("/root/fonts/Manrope-Regular.ttf");
 }
@@ -24,7 +28,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-p, span, a, div {
+p, div {
   color: #171717;
   font-family: "Manrope-Regular";
   font-size: 11pt;
@@ -38,6 +42,7 @@ code {
 
 a {
   cursor: pointer;
+  text-decoration: none;
 }
 
 header {
@@ -53,6 +58,16 @@ section, footer {
   max-width: 800px;
   min-width: 600px;
   padding: 15px;
+}
+
+.chapter-header > .chapter-header-name {
+  font-family: "Manrope-ExtraBold";
+  font-size: 32px;
+  margin: 35px 40% 20px 0;
+}
+.chapter-header > .chapter-header-description {
+  font-size: 16px;
+  margin-right: 20%;
 }
 
 .code-panel {
@@ -85,12 +100,18 @@ section, footer {
   font-size: 16px;
   line-height: 1.5;
 }
+.text-panel a {
+  color: #0065b3;
+}
+.text-panel a:hover {
+  text-decoration: underline;
+}
 
 .subtitle-anchor {
   margin: 40px 0 20px 0;
 }
 .subtitle-anchor > .subtitle-anchor-header {
-  font-family: "Manrope-Bold";
+  font-family: "Manrope-ExtraBold";
   font-size: 32px;
 }
 
@@ -123,6 +144,9 @@ section, footer {
 .note-panel > .note-panel-content a {
   color: #3b2e58;
   font-family: "Manrope-Bold";
+}
+.note-panel > .note-panel-content a:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=article.css.map */

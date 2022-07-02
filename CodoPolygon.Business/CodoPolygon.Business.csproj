@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\CodeManager.cs" />
+    <Compile Include="Editor\ContentManager.cs" />
     <Compile Include="Editor\Inspector.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

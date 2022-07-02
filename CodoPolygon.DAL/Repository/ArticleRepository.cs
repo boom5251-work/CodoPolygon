@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Migrations;
+using System.Data.Entity.Validation;
 using System.Linq;
 
 namespace CodoPolygon.DAL.Repository
@@ -35,8 +36,16 @@ namespace CodoPolygon.DAL.Repository
         /// <returns>True — действие выполнено успешно. False — нет.</returns>
         public bool AddOrUpdate(Article article)
         {
-            _set.AddOrUpdate(article);
-            return _context.SaveChanges() == 1;
+            try
+            {
+                _set.AddOrUpdate(article);
+                return _context.SaveChanges() == 1;
+            }
+            catch (DbEntityValidationException)
+            {
+                // TODO: Добавить обработку исключения.
+                return false;
+            }
         }
 
 

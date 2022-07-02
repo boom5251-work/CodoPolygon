@@ -13,5 +13,14 @@ namespace CodoPolygon.Pages.DevPanel
 
     public partial class Editor
     {
+
+        /// <summary>
+        /// contentContainer элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически созданное поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel contentContainer;
     }
 }

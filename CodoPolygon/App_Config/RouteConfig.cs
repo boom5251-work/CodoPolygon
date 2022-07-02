@@ -27,7 +27,7 @@ namespace CodoPolygon.AppConfig
 
             routes.MapPageRoute(
                 "Login",
-                "auth.aspx",
+                "login.aspx",
                 "~/Pages/DevPanel/Login.aspx"
             );
 

@@ -12,7 +12,6 @@ $note-editor-background: #efd9fd
   box-sizing: border-box
   cursor: pointer
   height: 24px
-  margin-right: 4px
   padding: 2px
 
   &:hover
@@ -28,6 +27,39 @@ $note-editor-background: #efd9fd
 
 
 
+.text-editor
+  border-bottom: 2px solid #181818
+  border-top: 2px solid #181818
+  border-style: dashed
+  border-left: none
+  border-right: none
+  margin-bottom: 25px
+  padding: 10px 0
+
+  >.text-editor-header
+    display: flex
+
+    >.buttons-container
+      display: flex
+
+  .content-editable
+    margin-top: 10px
+    outline: none
+
+  .code
+    background-color: #ddd
+    font-family: 'Cascadia-Mono'
+    padding: 2px
+
+  .editor-button
+    margin-right: 4px
+    @include editor-button(#eee)
+
+  .editor-remove-button
+    @include editor-button(#eee)
+
+
+
 .code-editor
   border: 1px solid $code-editor-header-background
   box-sizing: border-box
@@ -39,7 +71,7 @@ $note-editor-background: #efd9fd
     display: flex
     padding: 8px 16px
 
-    >.code-editor-header-select
+    >.lang-select
       background-color: transparent
       border: 1px solid darken($code-editor-header-background, 15%)
       color: $main-text-color
@@ -55,7 +87,7 @@ $note-editor-background: #efd9fd
   >.code-editor-content
     background-color: #f2f2f2
 
-    >.code-editor-content-area
+    >.content-area
       background-color: transparent
       border: none
       box-sizing: border-box
@@ -107,12 +139,11 @@ $note-editor-background: #efd9fd
 
     >a
       color: #3b2e58
+      cursor: inherit
       font-family: "Manrope-Bold"
 
-    >a:hover
-      text-decoration: underline
-
   .editor-button
+    margin-right: 4px
     @include editor-button($note-editor-background)
 
   .editor-remove-button

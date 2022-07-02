@@ -28,9 +28,5 @@ namespace CodoPolygon.DAL.DomainModels
         internal Chapter Chapter { get; set; }
         [ForeignKey(nameof(TypeId))]
         internal ContentType Type { get; set; }
-
-        /// <summary>Тип элемента содержимого.</summary>
-        [NotMapped]
-        public Base.ContentType ContentType => (Base.ContentType)TypeId;
     }
 }

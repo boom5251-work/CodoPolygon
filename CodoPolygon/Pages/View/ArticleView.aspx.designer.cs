@@ -15,13 +15,13 @@ namespace CodoPolygon.Pages.View
     {
 
         /// <summary>
-        /// pageNavigation элемент управления.
+        /// headerContainer элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически созданное поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Menu pageNavigation;
+        protected global::System.Web.UI.WebControls.Panel headerContainer;
 
         /// <summary>
         /// contentContainer элемент управления.

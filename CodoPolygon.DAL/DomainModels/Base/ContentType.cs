@@ -2,8 +2,10 @@
 {
     public enum ContentType
     {
-        NotSet = 1,
+        NotSet,
         FormattedText,
+        FormattedNote,
+        SubtitleAnchor,
         CodeAspxCsharp,
         CodeCss,
         CodeCsharp,

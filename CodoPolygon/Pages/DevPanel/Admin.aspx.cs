@@ -23,16 +23,15 @@ namespace CodoPolygon.Pages.DevPanel
                     user = userRepository.GetByEmail(User.Identity.Name);
                 }
 
-                var adminRole = DAL.DomainModels.Base.UserRole.Admin;
-
                 if (user == null)
                 {
                     FormsAuthentication.RedirectToLoginPage();
                 }
-                else if (user.UserRole != adminRole)
-                {
-                    FormsAuthentication.RedirectToLoginPage();
-                }
+                // TODO: Изменить.
+                //else if (user.UserRole != adminRole)
+                //{
+                //    FormsAuthentication.RedirectToLoginPage();
+                //}
             }
         }
 

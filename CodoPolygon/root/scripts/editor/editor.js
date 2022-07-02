@@ -2,55 +2,114 @@
     $('.content-container').sortable({ cancel: 'input, textarea, select, img, p, [contentEditable]' });
 
 
+    $('.add-subtitle-editor-button').on('click', function () {
+       $('.content-container').append(subtitleEditor);
+    });
+
+    // Добавление редактора текста.
+    $('.add-text-editor-button').on('click', function () {
+        $('.content-container').append(textEditor);
+    });
+
+    // Добавление редактора кода.
     $('.add-code-editor-button').on('click', function () {
         $('.content-container').append(codeEditor);
     });
 
+    // Добавление редактора примечания.
+    $('.add-note-editor-button').on('click', function () {
+        $('.content-container').append(noteEditor);
+    });
 
+
+    // Удаление редактора содержимого.
     $(document).on('click', '.editor-remove-button', function () {
        $(this).closest('.editor').remove();
     });
 
 
+    // Открытие поля создания ссылок.
     $(document).on('click', '.add-link-button', function () {
        let $buttonContainer = $(this).closest('.buttons-container');
        $buttonContainer.find('.link-item-container').css("visibility", "inherit");
     });
 
 
+    // Подтверждение создания ссылки в форматированном тексте.
     $(document).on('click', '.save-link-button', function () {
         let $buttonContainer = $(this).closest('.buttons-container');
 
         let $hrefInput = $buttonContainer.find('.href-input');
 
         let linkUrl = $hrefInput.val();
-        let linkText = document.getSelection();
+        let selection = document.getSelection();
 
-        document.execCommand('insertHTML', false, `<a href="${linkUrl} target="_black">${linkText}</a>`);
-
-        $hrefInput.val('');
-        $buttonContainer.find('.link-item-container').css("visibility", "hidden");
+        if (linkUrl !== '') {
+            document.execCommand('insertHTML', false, `<a href="${linkUrl} target="_black">${selection}</a>`);
+            $hrefInput.val('');
+            $buttonContainer.find('.link-item-container').css("visibility", "hidden");
+        }
     });
 
 
+    // Отмена создания ссылки в форматированном тексте.
     $(document).on('click', '.cancel-link-button', function () {
         let $buttonContainer = $(this).closest('.buttons-container');
         $buttonContainer.find('.link-item-container').css("visibility", "hidden");
     });
+
+
+    // Выделение текста жирным.
+    $(document).on('click', '.bold-button', function () {
+        document.execCommand('bold', false, null);
+    });
+
+    // Подчеркивание текста.
+    $(document).on('click', '.underline-button', function () {
+        document.execCommand('underline', false, null);
+    });
+
+    // Зачеркивание текста.
+    $(document).on('click', '.strikethrough-button', function () {
+        document.execCommand('strikethrough', false, null);
+    });
+
+    // Выделение кода в текста.
+    $(document).on('click', '.code-style-button', function () {
+        let selection = document.getSelection();
+        document.execCommand('insertHTML', false, `<span class="code">${selection}</span>`);
+    });
 })
 
 
-const removeContainer = `<div class="remove-button-container">
-    <svg class="editor-remove-button" viewBox="0 0 64 64" fill="#979797" xmlns="http://www.w3.org/2000/svg">
-        <path d="M20.5417 29.75H43.4583C44.0661 29.75 44.649 29.9871 45.0788 30.409C45.5086 30.831 45.75 31.4033 45.75 32C45.75 32.5967 45.5086 33.169 45.0788 33.591C44.649 34.0129 44.0661 34.25 43.4583 34.25H20.5417C19.9339 34.25 19.351 34.0129 18.9212 33.591C18.4914 33.169 18.25 32.5967 18.25 32C18.25 31.4033 18.4914 30.831 18.9212 30.409C19.351 29.9871 19.9339 29.75 20.5417 29.75V29.75Z" />
-        <path d="M32 59.4286C35.602 59.4286 39.1687 58.7191 42.4965 57.3407C45.8242 55.9623 48.848 53.9419 51.3949 51.3949C53.9419 48.848 55.9623 45.8242 57.3407 42.4965C58.7191 39.1687 59.4286 35.602 59.4286 32C59.4286 28.398 58.7191 24.8313 57.3407 21.5035C55.9623 18.1758 53.9419 15.152 51.3949 12.6051C48.848 10.0581 45.8242 8.03772 42.4965 6.6593C39.1687 5.28089 35.602 4.57143 32 4.57143C24.7255 4.57143 17.7489 7.46122 12.6051 12.6051C7.46122 17.7489 4.57143 24.7255 4.57143 32C4.57143 39.2745 7.46122 46.2511 12.6051 51.3949C17.7489 56.5388 24.7255 59.4286 32 59.4286V59.4286ZM32 64C23.5131 64 15.3737 60.6286 9.37258 54.6274C3.37142 48.6263 0 40.4869 0 32C0 23.5131 3.37142 15.3737 9.37258 9.37258C15.3737 3.37142 23.5131 0 32 0C40.4869 0 48.6263 3.37142 54.6274 9.37258C60.6286 15.3737 64 23.5131 64 32C64 40.4869 60.6286 48.6263 54.6274 54.6274C48.6263 60.6286 40.4869 64 32 64Z" />
-    </svg>
+
+const subtitleEditor = `<div class="subtitle-editor editor">
+    <div><input class="content-area" type="text" /></div>
+    <input class="editor-remove-button" type="button" value="delete" />
+</div>`;
+
+
+const textEditor = `<div class="text-editor editor">
+    <div class="text-editor-header">
+        <div class="buttons-container">
+            <img class="editor-button bold-button" src="/root/icons/bold-black.svg" alt="Жирный" />
+            <img class="editor-button underline-button" src="/root/icons/underline-black.svg" alt="Подчеркнутый" />
+            <img class="editor-button strikethrough-button" src="/root/icons/strikethrough-black.svg" alt="Зачеркнутый" />
+            <img class="editor-button code-style-button" src="/root/icons/code-black.svg" alt="Выделение" />
+        </div>
+        <div class="remove-button-container">
+            <img class="editor-remove-button" src="/root/icons/remove-black.svg" alt="Удалить" />
+        </div>
+    </div>
+    <div class="text-editor-content">
+        <div contenteditable="true" class="content-editable content-area"></div>
+    </div>
 </div>`;
 
 
 const codeEditor = `<div class="code-editor editor">
     <div class="code-editor-header">
-        <select class="code-editor-header-select">
+        <select class="lang-select">
             <option value="_default">Не выбрано</option>
             <option value="aspx-csharp">ASP.NET (C#) (.aspx, .ascx)</option>
             <option value="css">CSS таблица стилей (.css)</option>
@@ -63,9 +122,29 @@ const codeEditor = `<div class="code-editor editor">
             <option value="syntaxsql">Transact-SQL (.sql)</option>
             <option value="typescript">TypeScript (.ts)</option>
         </select>
-        ${removeContainer}
+        <div class="remove-button-container">
+            <img class="editor-remove-button" src="/root/icons/remove-grey.svg" alt="Удалить">
+        </div>
     </div>
     <div class="code-editor-content">
-        <textarea class="code-editor-content-area" rows="1"></textarea>
+        <textarea class="content-area" rows="2">// Это поле, в которое вы можете добавить программный код.\n// Большое количество строк стоит разделить его на несколько секций.</textarea>
     </div>
+</div>`;
+
+
+const noteEditor = `<div class="note-editor editor">
+    <div class="note-editor-header">
+        <div class="buttons-container">
+            <img class="editor-button add-link-button" src="/root/icons/link-purple.svg" alt="Вставить ссылку" />
+            <div class="link-item-container">
+                <input class="href-input" type="text" placeholder="https://mysite.ru" />
+                <img class="editor-button save-link-button" src="/root/icons/ok-purple.svg" alt="Добавить" />
+                <img class="editor-button cancel-link-button" src="/root/icons/cancel-purple.svg" alt="Отменить" />
+            </div>
+        </div>
+        <div class="remove-button-container">
+            <img class="editor-remove-button" src="/root/icons/remove-purple.svg" alt="Удалить" />
+        </div>
+    </div>
+    <div class="content-editable content-area" contenteditable="true">Это поле примечания, в которое можно добавить ссылку, например, на сайт <a href="https://www.microsoft.com/ru-ru">Майкрософт</a>.</div>
 </div>`;

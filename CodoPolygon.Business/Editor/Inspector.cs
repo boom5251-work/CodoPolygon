@@ -12,7 +12,7 @@ namespace CodoPolygon.Business.Editor
         /// <returns>True, если вхождение найдено. False — нет.</returns>
         public static bool HasArticle(string articleQueryValue)
         {
-            if (string.IsNullOrEmpty(articleQueryValue))
+            if (!string.IsNullOrEmpty(articleQueryValue))
             {
                 using (var repository = new ArticleRepository())
                 {
@@ -27,13 +27,11 @@ namespace CodoPolygon.Business.Editor
         /// Проверяет, существует ли глава в статье с указанным порядковым номером.
         /// </summary>
         /// <param name="articleQueryValue">Сокращенное латинское название.</param>
-        /// <param name="chapterQueryValue">Порядковый номер главы (строка).</param>
+        /// <param name="chapterQueryValue">Порядковый номер главы.</param>
         /// <returns>True, если вхождение найдено. False — нет.</returns>
-        public static bool HasChapter(string articleQueryValue, string chapterQueryValue)
+        public static bool HasChapter(string articleQueryValue, int chapterQueryValue)
         {
-            bool notNullOrEmptyStrings = !string.IsNullOrEmpty(articleQueryValue) && !string.IsNullOrEmpty(chapterQueryValue);
-
-            if (notNullOrEmptyStrings && int.TryParse(chapterQueryValue, out int chapterSeqNum))
+            if (!string.IsNullOrEmpty(articleQueryValue))
             {
                 Article article;
 
@@ -46,7 +44,7 @@ namespace CodoPolygon.Business.Editor
                 {
                     using (var repository = new ChapterRepository())
                     {
-                        return repository.HasChapter(article.Id, chapterSeqNum);
+                        return repository.HasChapter(article.Id, chapterQueryValue);
                     }
                 }
                 else return false;

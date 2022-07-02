@@ -2,7 +2,7 @@
 
 <div class="code-editor editor">
     <div class="code-editor-header">
-        <asp:DropDownList ID="langSelect" CssClass="code-editor-header-select" runat="server">
+        <asp:DropDownList ID="langSelect" CssClass="lang-select" runat="server">
             <asp:ListItem Value="_default" Text="Не выбрано" />
             <asp:ListItem Value="aspx-csharp" Text="ASP.NET (C#) (.aspx, .ascx)" />
             <asp:ListItem Value="css" Text="CSS таблица стилей (.css)" />
@@ -20,6 +20,6 @@
         </div>
     </div>
     <div class="code-editor-content">
-        <textarea id="code" class="code-editor-content-area" runat="server"><%= Code %></textarea>
+        <textarea id="code" class="content-area" runat="server"><%= Code %></textarea>
     </div>
 </div>

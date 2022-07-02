@@ -5,6 +5,17 @@ $code-panel-header-background: #e6e6e6
 $code-panel-content-background: #f2f2f2
 
 
+.chapter-header
+  >.chapter-header-name
+    font-family: 'Manrope-ExtraBold'
+    font-size: 32px
+    margin: 35px 40% 20px 0
+
+  >.chapter-header-description
+    font-size: 16px
+    margin-right: 20%
+
+
 .code-panel
   border: 1px solid $code-panel-header-background
   box-sizing: border-box
@@ -35,12 +46,18 @@ $code-panel-content-background: #f2f2f2
     font-size: 16px
     line-height: 1.5
 
+  a
+    color: #0065b3
+
+  a:hover
+    text-decoration: underline
+
 
 .subtitle-anchor
   margin: 40px 0 20px 0
 
   >.subtitle-anchor-header
-    font-family: 'Manrope-Bold'
+    font-family: 'Manrope-ExtraBold'
     font-size: 32px
 
 
@@ -73,3 +90,6 @@ $code-panel-content-background: #f2f2f2
     a
       color: #3b2e58
       font-family: 'Manrope-Bold'
+
+    a:hover
+      text-decoration: underline

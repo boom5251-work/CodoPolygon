@@ -62,7 +62,6 @@
     <Compile Include="DomainModels\User.cs" />
     <Compile Include="DomainModels\UserArticle.cs" />
     <Compile Include="DomainModels\UserRole.cs" />
-    <Compile Include="Map\ArticleMap.cs" />
     <Compile Include="Map\ContentItemMap.cs" />
     <Compile Include="Migrations\202205031814584_Initial.cs" />
     <Compile Include="Migrations\202205031814584_Initial.designer.cs">
@@ -76,11 +75,16 @@
     <Compile Include="Migrations\202205170844135_ArticleUpdated_2.designer.cs">
       <DependentUpon>202205170844135_ArticleUpdated_2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202207021428195_TypesUpdated.cs" />
+    <Compile Include="Migrations\202207021428195_TypesUpdated.designer.cs">
+      <DependentUpon>202207021428195_TypesUpdated.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\ArticleRepository.cs" />
     <Compile Include="Repository\ChapterRepository.cs" />
     <Compile Include="Repository\ContentRepository.cs" />
+    <Compile Include="Repository\ContentTypeRepository.cs" />
     <Compile Include="Repository\UserArticleRepository.cs" />
     <Compile Include="Repository\UserRepository.cs" />
     <Compile Include="ViewModels\ArticleViewModel.cs" />
@@ -95,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202205170844135_ArticleUpdated_2.resx">
       <DependentUpon>202205170844135_ArticleUpdated_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202207021428195_TypesUpdated.resx">
+      <DependentUpon>202207021428195_TypesUpdated.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

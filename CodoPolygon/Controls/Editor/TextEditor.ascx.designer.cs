@@ -7,20 +7,20 @@
 // </автоматически создаваемое>
 //------------------------------------------------------------------------------
 
-namespace CodoPolygon.Pages.DevPanel
+namespace CodoPolygon.Controls.Editor
 {
 
 
-    public partial class Author
+    public partial class TextEditor
     {
 
         /// <summary>
-        /// articlesContainer элемент управления.
+        /// contentArea элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически созданное поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel articlesContainer;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl contentArea;
     }
 }

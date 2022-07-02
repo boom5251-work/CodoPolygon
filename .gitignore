@@ -362,3 +362,4 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 /CodoPolygon/root/.idea
+/CodoPolygon/Controls/DevPanel/Author/ArticlePanel.ascx.designer.cs

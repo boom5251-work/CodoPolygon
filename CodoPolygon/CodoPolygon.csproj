@@ -87,21 +87,107 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Controls\Editor\CodeEditor.ascx" />
+    <Content Include="Controls\Editor\NoteEditor.ascx" />
+    <Content Include="Controls\Editor\TextEditor.ascx" />
+    <Content Include="Controls\View\ChapterHeader.ascx" />
+    <Content Include="Controls\View\CodePanel.ascx" />
+    <Content Include="Controls\View\NotePanel.ascx" />
+    <Content Include="Controls\View\SubtitleAnchor.ascx" />
+    <Content Include="Controls\View\TextPanel.ascx" />
     <Content Include="Global.asax" />
     <Content Include="Pages\Error.aspx" />
-    <Content Include="Pages\View\ArticleView.aspx" />
     <Content Include="Pages\DevPanel\Admin.aspx" />
     <Content Include="Pages\DevPanel\Author.aspx" />
     <Content Include="Pages\DevPanel\Editor.aspx" />
     <Content Include="Pages\DevPanel\Login.aspx" />
     <Content Include="Pages\Index.aspx" />
+    <Content Include="Pages\View\ArticleView.aspx" />
+    <Content Include="root\icons\bold-black.svg" />
+    <Content Include="root\icons\cancel-purple.svg" />
+    <Content Include="root\icons\code-black.svg" />
+    <Content Include="root\icons\link-purple.svg" />
+    <Content Include="root\icons\note.svg" />
+    <Content Include="root\icons\ok-purple.svg" />
+    <Content Include="root\icons\remove-black.svg" />
+    <Content Include="root\icons\remove-grey.svg" />
+    <Content Include="root\icons\remove-purple.svg" />
+    <Content Include="root\icons\strikethrough-black.svg" />
+    <Content Include="root\icons\underline-black.svg" />
+    <Content Include="root\libs\highlight.js" />
+    <Content Include="root\libs\highlight\csharp.min.js" />
     <Content Include="root\libs\jquery-ui.min.js" />
     <Content Include="root\libs\jquery.min.js" />
+    <Content Include="root\scripts\author\article-manager.js" />
+    <Content Include="root\scripts\editor\editor.js" />
+    <Content Include="root\scripts\editor\content-manager.js" />
+    <Content Include="root\styles\article\article.css" />
+    <Content Include="root\styles\author\author.css" />
+    <Content Include="root\styles\code.css" />
+    <Content Include="root\styles\editor\editor.css" />
+    <Content Include="root\styles\main.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Config\RouteConfig.cs" />
+    <Compile Include="Controllers\AuthorController.cs" />
     <Compile Include="Controllers\EditorController.cs" />
+    <Compile Include="Controls\Editor\CodeEditor.ascx.cs">
+      <DependentUpon>CodeEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editor\CodeEditor.ascx.designer.cs">
+      <DependentUpon>CodeEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editor\NoteEditor.ascx.cs">
+      <DependentUpon>NoteEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editor\NoteEditor.ascx.designer.cs">
+      <DependentUpon>NoteEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editor\TextEditor.ascx.cs">
+      <DependentUpon>TextEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Editor\TextEditor.ascx.designer.cs">
+      <DependentUpon>TextEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\View\ChapterHeader.ascx.cs">
+      <DependentUpon>ChapterHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\View\ChapterHeader.ascx.designer.cs">
+      <DependentUpon>ChapterHeader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\View\CodePanel.ascx.cs">
+      <DependentUpon>CodePanel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\View\CodePanel.ascx.designer.cs">
+      <DependentUpon>CodePanel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\View\NotePanel.ascx.cs">
+      <DependentUpon>NotePanel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\View\NotePanel.ascx.designer.cs">
+      <DependentUpon>NotePanel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\View\SubtitleAnchor.ascx.cs">
+      <DependentUpon>SubtitleAnchor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\View\SubtitleAnchor.ascx.designer.cs">
+      <DependentUpon>SubtitleAnchor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\View\TextPanel.ascx.cs">
+      <DependentUpon>TextPanel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\View\TextPanel.ascx.designer.cs">
+      <DependentUpon>TextPanel.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -111,13 +197,6 @@
     </Compile>
     <Compile Include="Pages\Error.aspx.designer.cs">
       <DependentUpon>Error.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\View\ArticleView.aspx.cs">
-      <DependentUpon>ArticleView.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\View\ArticleView.aspx.designer.cs">
-      <DependentUpon>ArticleView.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\DevPanel\Admin.aspx.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
@@ -154,6 +233,13 @@
     <Compile Include="Pages\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\View\ArticleView.aspx.cs">
+      <DependentUpon>ArticleView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\View\ArticleView.aspx.designer.cs">
+      <DependentUpon>ArticleView.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -166,9 +252,23 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Site.Master" />
-    <Content Include="root\styles\editor\content.sass" />
-    <Content Include="root\styles\editor\layout.sass" />
     <Content Include="root\styles\main.sass" />
+    <Content Include="root\styles\author\author.css.map" />
+    <Content Include="root\styles\author\author.sass" />
+    <Content Include="root\styles\editor\editor.css.map" />
+    <Content Include="root\styles\editor\editor.sass" />
+    <Content Include="root\fonts\Manrope-Bold.ttf" />
+    <Content Include="root\fonts\Manrope-ExtraBold.ttf" />
+    <Content Include="root\fonts\Manrope-ExtraLight.ttf" />
+    <Content Include="root\fonts\Manrope-Light.ttf" />
+    <Content Include="root\fonts\Manrope-Medium.ttf" />
+    <Content Include="root\fonts\Manrope-Regular.ttf" />
+    <Content Include="root\fonts\Manrope-SemiBold.ttf" />
+    <Content Include="root\styles\article\article.css.map" />
+    <Content Include="root\styles\article\article.sass" />
+    <Content Include="root\fonts\Cascadia-Mono.ttf" />
+    <Content Include="root\styles\code.css.map" />
+    <Content Include="root\styles\code.sass" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -178,9 +278,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="root\fonts\" />
-    <Folder Include="root\icons\" />
-    <Folder Include="root\scripts\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CodoPolygon.Business\CodoPolygon.Business.csproj">

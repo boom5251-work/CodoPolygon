@@ -21,9 +21,8 @@ namespace CodoPolygon.DAL.Map
             {
                 var domain = new ContentItem
                 {
-                    //Id = !item.Id.HasValue ? item.Id.Value : id,
                     ChapterId = chapterId,
-                    TypeId = (int)GetType(item.TypeCode),
+                    TypeId = GetTypeId(item.TypeCode),
                     Content = item.Content,
                     SequenceNumber = item.SeqNum
                 };
@@ -50,10 +49,27 @@ namespace CodoPolygon.DAL.Map
 
 
         /// <summary>
+        /// Возвращает идентификатор типа элемента содержимого.
+        /// </summary>
+        /// <param name="typeCode">Строковый код типа.</param>
+        /// <returns>Идентификатор типа элемента содержимого.</returns>
+        internal int GetTypeId(string typeCode)
+        {
+            var type = GetType(typeCode);
+
+            using (var repository = new ContentTypeRepository())
+            {
+                return repository.GetByUniqueCode((int)type).Id;
+            }
+        }
+
+
+
+        /// <summary>
         /// Возвращает тип элемента содержимого на основе строкового кода типа.
         /// </summary>
         /// <param name="typeCode">Строковый код типа.</param>
-        /// <returns>Тип элемента содержимого.</returns>
+        /// <returns>Тип элемента содержимого (перечисление).</returns>
         internal DomainModels.Base.ContentType GetType(string typeCode)
         {
             DomainModels.Base.ContentType contentType;
@@ -92,6 +108,12 @@ namespace CodoPolygon.DAL.Map
                     break;
                 case "typescript":
                     contentType = DomainModels.Base.ContentType.CodeTypeScript;
+                    break;
+                case "subtitleAnchor":
+                    contentType = DomainModels.Base.ContentType.SubtitleAnchor;
+                    break;
+                case "formattedNote":
+                    contentType = DomainModels.Base.ContentType.FormattedNote;
                     break;
                 default:
                     contentType = DomainModels.Base.ContentType.NotSet;

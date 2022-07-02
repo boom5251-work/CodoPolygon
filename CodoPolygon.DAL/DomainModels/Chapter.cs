@@ -15,8 +15,11 @@ namespace CodoPolygon.DAL.DomainModels
         public int ArticleId { get; set; }
 
         /// <summary>Название главы.</summary>
-        [Required, MinLength(5), MaxLength(100)]
+        [Required]
+        [MinLength(5)]
+        [MaxLength(100)]
         public string Name { get; set; }
+
         /// <summary>Порядковый номер главы.</summary>
         [Required]
         public int SequenceNumber { get; set; }

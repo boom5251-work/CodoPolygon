@@ -8,6 +8,23 @@ namespace CodoPolygon.Pages.DevPanel
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            CheckIdentity();
+            //InitializeUserData();
+            InitializeArticles();
+        }
+
+
+
+        protected void LogOutButton_Click(object sender, EventArgs e)
+        {
+            FormsAuthentication.SignOut();
+            FormsAuthentication.RedirectToLoginPage();
+        }
+
+
+
+        private void CheckIdentity()
+        {
             if (!User.Identity.IsAuthenticated)
             {
                 FormsAuthentication.RedirectToLoginPage();
@@ -15,10 +32,18 @@ namespace CodoPolygon.Pages.DevPanel
         }
 
 
-        protected void LogOutButton_Click(object sender, EventArgs e)
+
+        private void InitializeUserData()
         {
-            FormsAuthentication.SignOut();
-            FormsAuthentication.RedirectToLoginPage();
+            throw new NotImplementedException();
+            // TODO: Реализовать.
+        }
+
+
+
+        private void InitializeArticles()
+        {
+            // TODO: Реализовать.
         }
     }
 }

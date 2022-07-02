@@ -15,5 +15,5 @@
         </div>
     </div>
 
-    <div class="content-editable" id="contentArea" contenteditable="true" runat="server"></div>
+    <div class="content-editable content-area" id="contentArea" contenteditable="true" runat="server"></div>
 </div>
