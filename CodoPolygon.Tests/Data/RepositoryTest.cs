@@ -3,7 +3,6 @@ using CodoPolygon.DAL.Map;
 using CodoPolygon.DAL.Repository;
 using CodoPolygon.DAL.ViewModels;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
 
 namespace CodoPolygon.Tests.Data
 {
@@ -28,8 +27,7 @@ namespace CodoPolygon.Tests.Data
         {
             using (var repository = new ArticleRepository())
             {
-                IReadOnlyList<Article> all = repository.All;
-                var article = all[0];
+                var article = repository.GetByLatName("test-article");
 
                 Assert.IsTrue(repository.Remove(article));
             }

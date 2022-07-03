@@ -117,9 +117,9 @@ const codeEditor = `<div class="code-editor editor">
             <option value="fsharp">F# — F Sharp (.fs)</option>
             <option value="html">HTML разметка (.html)</option>
             <option value="javascript">Javascript (.js)</option>
-            <option value="cshtml">Razor Pages (.cshtml)</option>
+            <option value="cshtml-razor">Razor Pages (.cshtml)</option>
             <option value="scss">SCSS таблица стилей (.scss)</option>
-            <option value="syntaxsql">Transact-SQL (.sql)</option>
+            <option value="sql">Transact-SQL (.sql)</option>
             <option value="typescript">TypeScript (.ts)</option>
         </select>
         <div class="remove-button-container">

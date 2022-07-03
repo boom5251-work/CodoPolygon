@@ -40,7 +40,7 @@ namespace CodoPolygon.AppConfig
             routes.MapPageRoute(
                 "Article",
                 "{latShortName}/article.aspx",
-                "~/Pages/View/ArticleView.aspx"
+                "~/Pages/View/Article.aspx"
             );
 
             routes.MapPageRoute(

@@ -11,8 +11,17 @@ namespace CodoPolygon.Pages.View
 {
 
 
-    public partial class ArticleView
+    public partial class Article
     {
+
+        /// <summary>
+        /// hljsLangsContainer элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически созданное поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel hljsLangsContainer;
 
         /// <summary>
         /// headerContainer элемент управления.

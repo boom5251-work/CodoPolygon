@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using CodoPolygon.DAL.DomainModels.Base;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CodoPolygon.DAL.DomainModels
@@ -26,6 +27,7 @@ namespace CodoPolygon.DAL.DomainModels
 
         [ForeignKey(nameof(ChapterId))]
         internal Chapter Chapter { get; set; }
+
         [ForeignKey(nameof(TypeId))]
         internal ContentType Type { get; set; }
     }

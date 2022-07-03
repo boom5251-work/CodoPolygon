@@ -9,40 +9,40 @@ namespace CodoPolygon.Business.Controls
         /// </summary>
         /// <param name="type">Тип содержимого.</param>
         /// <returns>Название языка (кодовое название).</returns>
-        public static string GetLang(ContentType type)
+        public static string GetLang(ContentItemType type)
         {
             string lang;
 
             switch (type)
             {
-                case ContentType.CodeAspxCsharp:
+                case ContentItemType.CodeAspxCsharp:
                     lang = "aspx-csharp";
                     break;
-                case ContentType.CodeCsharp:
+                case ContentItemType.CodeCsharp:
                     lang = "csharp";
                     break;
-                case ContentType.CodeCss:
+                case ContentItemType.CodeCss:
                     lang = "css";
                     break;
-                case ContentType.CodeFsharp:
+                case ContentItemType.CodeFsharp:
                     lang = "fsharp";
                     break;
-                case ContentType.CodeHtml:
-                    lang = "html";
+                case ContentItemType.CodeHtml:
+                    lang = "xml";
                     break;
-                case ContentType.CodeJavascript:
+                case ContentItemType.CodeJavascript:
                     lang = "javascript";
                     break;
-                case ContentType.CodeRazor:
-                    lang = "cshtml";
+                case ContentItemType.CodeRazor:
+                    lang = "cshtml-razor";
                     break;
-                case ContentType.CodeScss:
+                case ContentItemType.CodeScss:
                     lang = "scss";
                     break;
-                case ContentType.CodeSyntaxSql:
-                    lang = "syntaxsql";
+                case ContentItemType.CodeTransactSql:
+                    lang = "sql";
                     break;
-                case ContentType.CodeTypeScript:
+                case ContentItemType.CodeTypeScript:
                     lang = "typescript";
                     break;
                 default:
@@ -59,40 +59,40 @@ namespace CodoPolygon.Business.Controls
         /// </summary>
         /// <param name="type">Тип содержимого.</param>
         /// <returns>Заголовок панели (название языка).</returns>
-        public static string GetTitle(ContentType type)
+        public static string GetTitle(ContentItemType type)
         {
             string title;
 
             switch (type)
             {
-                case ContentType.CodeAspxCsharp:
+                case ContentItemType.CodeAspxCsharp:
                     title = "ASP.NET";
                     break;
-                case ContentType.CodeCsharp:
+                case ContentItemType.CodeCsharp:
                     title = "C#";
                     break;
-                case ContentType.CodeCss:
+                case ContentItemType.CodeCss:
                     title = "CSS";
                     break;
-                case ContentType.CodeFsharp:
+                case ContentItemType.CodeFsharp:
                     title = "F#";
                     break;
-                case ContentType.CodeHtml:
+                case ContentItemType.CodeHtml:
                     title = "HTML";
                     break;
-                case ContentType.CodeJavascript:
+                case ContentItemType.CodeJavascript:
                     title = "JavaScript";
                     break;
-                case ContentType.CodeRazor:
+                case ContentItemType.CodeRazor:
                     title = "Razor";
                     break;
-                case ContentType.CodeScss:
+                case ContentItemType.CodeScss:
                     title = "SCSS";
                     break;
-                case ContentType.CodeSyntaxSql:
-                    title = "syntaxsql";
+                case ContentItemType.CodeTransactSql:
+                    title = "T-SQL";
                     break;
-                case ContentType.CodeTypeScript:
+                case ContentItemType.CodeTypeScript:
                     title = "TypeScript";
                     break;
                 default:

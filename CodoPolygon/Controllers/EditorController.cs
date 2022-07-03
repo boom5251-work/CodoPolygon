@@ -1,4 +1,4 @@
-﻿using CodoPolygon.Business.Editor;
+﻿using CodoPolygon.Business.ArticleContent;
 using CodoPolygon.DAL.ViewModels;
 using System.Collections.Generic;
 using System.Net.Http;

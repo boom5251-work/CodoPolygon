@@ -28,7 +28,7 @@ namespace CodoPolygon.Controls.View
         /// </summary>
         /// <param name="code">Содержимое контрола (код).</param>
         /// <param name="type">Тип содержимого.</param>
-        public void Initialize(string code, ContentType type)
+        public void Initialize(string code, ContentItemType type)
         {
             Lang = CodeManager.GetLang(type);
             Title = CodeManager.GetTitle(type);

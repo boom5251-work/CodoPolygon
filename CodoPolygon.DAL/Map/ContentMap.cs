@@ -1,4 +1,5 @@
 ﻿using CodoPolygon.DAL.DomainModels;
+using CodoPolygon.DAL.DomainModels.Base;
 using CodoPolygon.DAL.Repository;
 using CodoPolygon.DAL.ViewModels;
 using System.Collections.Generic;
@@ -49,6 +50,21 @@ namespace CodoPolygon.DAL.Map
 
 
         /// <summary>
+        /// Возвращает модели хранилища элементов содержимого по идентификатору главы.
+        /// </summary>
+        /// <param name="chapterId">Идентификатор главы.</param>
+        /// <returns>Перечислитель моделей хранилища элементов содержимого.</returns>
+        public IEnumerable<ContentItem> GetDomainsByChapterId(int chapterId)
+        {
+            using (var repository = new ContentRepository())
+            {
+                return repository.GetByChapterId(chapterId);
+            }
+        } 
+
+
+
+        /// <summary>
         /// Возвращает идентификатор типа элемента содержимого.
         /// </summary>
         /// <param name="typeCode">Строковый код типа.</param>
@@ -70,57 +86,57 @@ namespace CodoPolygon.DAL.Map
         /// </summary>
         /// <param name="typeCode">Строковый код типа.</param>
         /// <returns>Тип элемента содержимого (перечисление).</returns>
-        internal DomainModels.Base.ContentType GetType(string typeCode)
+        internal ContentItemType GetType(string typeCode)
         {
-            DomainModels.Base.ContentType contentType;
+            ContentItemType type;
 
             switch (typeCode)
             {
                 case "formattedText":
-                    contentType = DomainModels.Base.ContentType.FormattedText;
+                    type = ContentItemType.FormattedText;
                     break;
                 case "aspx-csharp":
-                    contentType = DomainModels.Base.ContentType.CodeAspxCsharp;
+                    type = ContentItemType.CodeAspxCsharp;
                     break;
                 case "css":
-                    contentType = DomainModels.Base.ContentType.CodeCss;
+                    type = ContentItemType.CodeCss;
                     break;
                 case "csharp":
-                    contentType = DomainModels.Base.ContentType.CodeCsharp;
+                    type = ContentItemType.CodeCsharp;
                     break;
                 case "fsharp":
-                    contentType = DomainModels.Base.ContentType.CodeFsharp;
+                    type = ContentItemType.CodeFsharp;
                     break;
                 case "html":
-                    contentType = DomainModels.Base.ContentType.CodeHtml;
+                    type = ContentItemType.CodeHtml;
                     break;
                 case "javascript":
-                    contentType = DomainModels.Base.ContentType.CodeJavascript;
+                    type = ContentItemType.CodeJavascript;
                     break;
                 case "cshtml":
-                    contentType = DomainModels.Base.ContentType.CodeRazor;
+                    type = ContentItemType.CodeRazor;
                     break;
                 case "scss":
-                    contentType = DomainModels.Base.ContentType.CodeScss;
+                    type = ContentItemType.CodeScss;
                     break;
                 case "syntaxsql":
-                    contentType = DomainModels.Base.ContentType.CodeSyntaxSql;
+                    type = ContentItemType.CodeTransactSql;
                     break;
                 case "typescript":
-                    contentType = DomainModels.Base.ContentType.CodeTypeScript;
+                    type = ContentItemType.CodeTypeScript;
                     break;
                 case "subtitleAnchor":
-                    contentType = DomainModels.Base.ContentType.SubtitleAnchor;
+                    type = ContentItemType.SubtitleAnchor;
                     break;
                 case "formattedNote":
-                    contentType = DomainModels.Base.ContentType.FormattedNote;
+                    type = ContentItemType.FormattedNote;
                     break;
                 default:
-                    contentType = DomainModels.Base.ContentType.NotSet;
+                    type = ContentItemType.NotSet;
                     break;
             }
 
-            return contentType;
+            return type;
         }
     }
 }

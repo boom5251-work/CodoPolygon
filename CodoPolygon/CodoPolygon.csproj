@@ -102,7 +102,7 @@
     <Content Include="Pages\DevPanel\Editor.aspx" />
     <Content Include="Pages\DevPanel\Login.aspx" />
     <Content Include="Pages\Index.aspx" />
-    <Content Include="Pages\View\ArticleView.aspx" />
+    <Content Include="Pages\View\Article.aspx" />
     <Content Include="root\icons\bold-black.svg" />
     <Content Include="root\icons\cancel-purple.svg" />
     <Content Include="root\icons\code-black.svg" />
@@ -116,6 +116,14 @@
     <Content Include="root\icons\underline-black.svg" />
     <Content Include="root\libs\highlight.js" />
     <Content Include="root\libs\highlight\csharp.min.js" />
+    <Content Include="root\libs\highlight\cshtml-razor.min.js" />
+    <Content Include="root\libs\highlight\css.min.js" />
+    <Content Include="root\libs\highlight\fsharp.min.js" />
+    <Content Include="root\libs\highlight\javascript.min.js" />
+    <Content Include="root\libs\highlight\scss.min.js" />
+    <Content Include="root\libs\highlight\sql.min.js" />
+    <Content Include="root\libs\highlight\typescript.min.js" />
+    <Content Include="root\libs\highlight\xml.min.js" />
     <Content Include="root\libs\jquery-ui.min.js" />
     <Content Include="root\libs\jquery.min.js" />
     <Content Include="root\scripts\author\article-manager.js" />
@@ -233,12 +241,12 @@
     <Compile Include="Pages\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\View\ArticleView.aspx.cs">
-      <DependentUpon>ArticleView.aspx</DependentUpon>
+    <Compile Include="Pages\View\Article.aspx.cs">
+      <DependentUpon>Article.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\View\ArticleView.aspx.designer.cs">
-      <DependentUpon>ArticleView.aspx</DependentUpon>
+    <Compile Include="Pages\View\Article.aspx.designer.cs">
+      <DependentUpon>Article.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">

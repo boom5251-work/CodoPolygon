@@ -10,9 +10,9 @@
             <asp:ListItem Value="fsharp" Text="F# &mdash; F Sharp (.fs)" />
             <asp:ListItem Value="html" Text="HTML разметка (.html)" />
             <asp:ListItem Value="javascript" Text="Javascript (.js)" />
-            <asp:ListItem Value="cshtml" Text="Razor Pages (.cshtml)" />
+            <asp:ListItem Value="cshtml-razor" Text="Razor Pages (.cshtml)" />
             <asp:ListItem Value="scss" Text="SCSS таблица стилей (.scss)" />
-            <asp:ListItem Value="syntaxsql" Text="Transact-SQL (.sql)" />
+            <asp:ListItem Value="sql" Text="Transact-SQL (.sql)" />
             <asp:ListItem Value="typescript" Text="TypeScript (.ts)" />
         </asp:DropDownList>
         <div class="remove-button-container">

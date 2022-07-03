@@ -1,8 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ArticleView.aspx.cs" Inherits="CodoPolygon.Pages.View.ArticleView" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Article.aspx.cs" Inherits="CodoPolygon.Pages.View.Article" %>
 
 <asp:Content ContentPlaceHolderID="head" runat="server">
     <script src="/root/libs/highlight.js"></script>
-    <script src="/root/libs/highlight/csharp.min.js"></script>
+    <asp:Panel ID="hljsLangsContainer" runat="server"></asp:Panel>
     <script>hljs.highlightAll();</script>
 
     <link href="/root/styles/code.css" rel="stylesheet" />

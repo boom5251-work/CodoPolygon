@@ -72,9 +72,9 @@ namespace CodoPolygon.DAL.Repository
         /// </summary>
         /// <param name="chapterId">Идентификатор главы.</param>
         /// <returns>Перечислитель элементов содержимого.</returns>
-        internal IEnumerable<ContentItem> GetByChapterId(int chapterId)
+        internal IReadOnlyList<ContentItem> GetByChapterId(int chapterId)
         {
-            return _set.Where(item => item.ChapterId == chapterId);
+            return _set.Where(item => item.ChapterId == chapterId).ToList();
         }
     }
 }

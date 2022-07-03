@@ -54,15 +54,16 @@
     <Compile Include="Context\ApplicationContext.cs" />
     <Compile Include="Context\IApplicationContext.cs" />
     <Compile Include="DomainModels\Article.cs" />
-    <Compile Include="DomainModels\Base\ContentType.cs" />
+    <Compile Include="DomainModels\Base\ContentItemType.cs" />
     <Compile Include="DomainModels\Base\UserRole.cs" />
     <Compile Include="DomainModels\Chapter.cs" />
     <Compile Include="DomainModels\ContentItem.cs" />
     <Compile Include="DomainModels\ContentType.cs" />
+    <Compile Include="DomainModels\Extensions\ContentItemExtention.cs" />
     <Compile Include="DomainModels\User.cs" />
     <Compile Include="DomainModels\UserArticle.cs" />
     <Compile Include="DomainModels\UserRole.cs" />
-    <Compile Include="Map\ContentItemMap.cs" />
+    <Compile Include="Map\ContentMap.cs" />
     <Compile Include="Migrations\202205031814584_Initial.cs" />
     <Compile Include="Migrations\202205031814584_Initial.designer.cs">
       <DependentUpon>202205031814584_Initial.cs</DependentUpon>

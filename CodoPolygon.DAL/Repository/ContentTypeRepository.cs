@@ -28,6 +28,17 @@ namespace CodoPolygon.DAL.Repository
 
 
         /// <summary>
+        /// Возвращает тип элемента содержимого по идентификатору.
+        /// </summary>
+        /// <param name="id">Идентификатор типа элемента содержимого.</param>
+        /// <returns>Тип элемента содержимого.</returns>
+        public ContentType GetById(int id)
+        {
+            return _set.SingleOrDefault(item => item.Id == id);
+        }
+
+
+        /// <summary>
         /// Возвращает тип содержимого по уникальному коду.
         /// </summary>
         /// <param name="uniqueCode">Уникальный код.</param>

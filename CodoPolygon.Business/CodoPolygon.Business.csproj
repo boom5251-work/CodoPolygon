@@ -42,8 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controls\CodeManager.cs" />
-    <Compile Include="Editor\ContentManager.cs" />
-    <Compile Include="Editor\Inspector.cs" />
+    <Compile Include="ArticleContent\ContentManager.cs" />
+    <Compile Include="ArticleContent\Inspector.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
